@@ -1,3 +1,12 @@
+---
+type: "Architecture Decision Record"
+title: "ADR 0001: Blog のリポジトリ境界"
+description: "Blogが所有する表示、routing、SSR、cache、feedの責務を他のrepositoryから分離することを定める。"
+resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0001-repository-boundary.md"
+tags: [blog, adr, architecture, repository-boundary]
+timestamp: 2026-08-10T06:56:15Z
+---
+
 # ADR 0001: Blog のリポジトリ境界
 
 ## ステータス

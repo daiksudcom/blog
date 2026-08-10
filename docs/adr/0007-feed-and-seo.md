@@ -1,3 +1,12 @@
+---
+type: "Architecture Decision Record"
+title: "ADR 0007: フィードと SEO"
+description: "blog.daiksud.comを公開URL authorityとし、RSS、sitemap、robots、canonicalを同originへ揃えることを定める。"
+resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0007-feed-and-seo.md"
+tags: [blog, adr, architecture, feed, seo]
+timestamp: 2026-08-10T06:56:15Z
+---
+
 # ADR 0007: フィードと SEO
 
 ## ステータス
