@@ -1,3 +1,12 @@
+---
+type: "Architecture Decision Record Index"
+title: "Architecture Decision Records"
+description: "Blogの責務、SSR、Content API、ISR、routing、無限スクロール、SEO、toolchainに関する設計判断への索引である。"
+resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/README.md"
+tags: [blog, adr, architecture, index]
+timestamp: 2026-08-10T06:56:15Z
+---
+
 # Architecture Decision Records
 
 | 番号 | 決定 | ステータス | 日付 |

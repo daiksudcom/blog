@@ -1,3 +1,12 @@
+---
+type: "Gherkin Specification Index"
+title: "振る舞い仕様"
+description: "記事一覧、タグ一覧、記事ページ、ISR、発見可能性、アクセシビリティのGherkin仕様への索引である。"
+resource: "https://github.com/daiksudcom/blog/blob/main/docs/features/README.md"
+tags: [blog, gherkin, specification, index]
+timestamp: 2026-08-10T06:56:15Z
+---
+
 # 振る舞い仕様
 
 - [記事一覧](article-list.feature)

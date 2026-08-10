@@ -1,3 +1,12 @@
+---
+type: "Architecture Decision Record"
+title: "ADR 0003: Content API へのアクセス"
+description: "共通Content clientと交換可能なtransportを採用し、SSRとbrowser追加取得で同じschemaを使うことを定める。"
+resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0003-content-api-access.md"
+tags: [blog, adr, architecture, content-api-access]
+timestamp: 2026-08-10T06:56:15Z
+---
+
 # ADR 0003: Content API へのアクセス
 
 ## ステータス
