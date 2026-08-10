@@ -4,7 +4,10 @@ title: "振る舞い仕様"
 description: "記事一覧、タグ一覧、記事ページ、ISR、発見可能性、アクセシビリティのGherkin仕様への索引である。"
 resource: "https://github.com/daiksudcom/blog/blob/main/docs/features/README.md"
 tags: [blog, gherkin, specification, index]
-timestamp: 2026-08-10T06:56:15Z
+status: stable
+generated:
+  by: "codex/gpt-5.6-sol"
+  at: 2026-08-10T07:07:01Z
 ---
 
 # 振る舞い仕様
