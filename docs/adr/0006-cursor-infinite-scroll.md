@@ -4,7 +4,10 @@ title: "ADR 0006: cursor 無限スクロール"
 description: "最初の12件をSSRし、opaque cursor、自動trigger、明示buttonで記事を継続取得することを定める。"
 resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0006-cursor-infinite-scroll.md"
 tags: [blog, adr, architecture, cursor, infinite-scroll]
-timestamp: 2026-08-10T06:56:15Z
+status: stable
+generated:
+  by: "codex/gpt-5.6-sol"
+  at: 2026-08-10T07:07:01Z
 ---
 
 # ADR 0006: cursor 無限スクロール

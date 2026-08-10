@@ -4,7 +4,10 @@ title: "ADR 0008: ツールチェーンとバージョン固定"
 description: "Blogのtoolchainと共有packageをrepository単位の厳密なversionへ固定することを定める。"
 resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0008-toolchain-and-version-pinning.md"
 tags: [blog, adr, architecture, toolchain, version-pinning]
-timestamp: 2026-08-10T06:56:15Z
+status: stable
+generated:
+  by: "codex/gpt-5.6-sol"
+  at: 2026-08-10T07:07:01Z
 ---
 
 # ADR 0008: ツールチェーンとバージョン固定

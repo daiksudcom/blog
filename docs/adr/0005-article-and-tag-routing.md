@@ -4,7 +4,10 @@ title: "ADR 0005: 記事とタグのルーティング"
 description: "記事slugとtagをBlog origin直下の共有namespaceへ配置し、Content manifestで衝突を検証することを定める。"
 resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0005-article-and-tag-routing.md"
 tags: [blog, adr, architecture, article-routing, tag-routing]
-timestamp: 2026-08-10T06:56:15Z
+status: stable
+generated:
+  by: "codex/gpt-5.6-sol"
+  at: 2026-08-10T07:07:01Z
 ---
 
 # ADR 0005: 記事とタグのルーティング
