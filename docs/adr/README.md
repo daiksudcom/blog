@@ -7,10 +7,12 @@ tags: [blog, adr, architecture, index]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # Architecture Decision Records
+
+ADR は技術判断の背景と理由、代替案、トレードオフ、結果を記録します。現在の具体的な値、URL、入出力、エラー、境界条件は対応する[振る舞い仕様](../features/README.md)を正本とし、ADR には重複して記載しません。
 
 | 番号 | 決定 | ステータス | 日付 |
 | --- | --- | --- | --- |

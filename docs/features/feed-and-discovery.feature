@@ -27,4 +27,4 @@ Feature: 記事をフィードと検索エンジンへ公開する
 
   Scenario: 公開ページの利用を計測する
     When 読者が production の Blog ページを表示する
-    Then Cloudflare Web Analytics が privacy-preserving な page view を記録する
+    Then privacy-preserving な page view の計測結果が記録される

@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, toolchain, version-pinning]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # ADR 0008: ツールチェーンとバージョン固定
@@ -40,6 +40,7 @@ Blog だけを変更した pull request は Blog だけをビルドでき、Home
 
 ## 関連文書
 
-- [Blog ISR 仕様](../features/blog-isr.feature)
+- [ADR 0001](0001-repository-boundary.md)
+- [ADR 0002](0002-astro-cloudflare-ssr.md)
 - [Content](https://github.com/daiksudcom/content)
 - [UI](https://github.com/daiksudcom/ui)

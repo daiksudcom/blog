@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, astro, cloudflare, ssr]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # ADR 0002: Astro と Cloudflare による SSR
@@ -26,7 +26,7 @@ generated:
 
 ## 決定
 
-Astro 7、Astro コンポーネント、`@astrojs/cloudflare`、`output: server` を採用し、Cloudflare Workers で SSR する。MDX を扱う箇所は使用する Astro コンポーネントを明示的に import する。Worker のランタイム契約は Web 標準 API とする。
+Astro 7、Astro コンポーネント、`@astrojs/cloudflare`、`output: server` を採用し、Cloudflare Workers で SSR する。Worker のランタイム契約は Web 標準 API とする。
 
 ## 検討した選択肢
 
@@ -36,9 +36,11 @@ Astro 7、Astro コンポーネント、`@astrojs/cloudflare`、`output: server`
 
 ## 結果
 
-Astro の Request/Response と Cloudflare binding を同じサーバー境界で扱える。SSR 応答は native Workers Caching の対象になる。
+Astro の Request/Response と Cloudflare binding を同じサーバー境界で扱える。browser UI framework の runtime を追加せずに、記事表示をサーバー側で完結できる。
 
 ## 関連文書
 
 - [記事ページ仕様](../features/article-page.feature)
+- [ADR 0003](0003-content-api-access.md)
 - [ADR 0004](0004-cloudflare-native-isr.md)
+- [Content の記事 API 仕様](https://github.com/daiksudcom/content/blob/main/docs/features/blog-article-api.feature)
