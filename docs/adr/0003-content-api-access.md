@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, content-api-access]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # ADR 0003: Content API へのアクセス
@@ -41,4 +41,6 @@ SSR、preview、ローカル開発、ブラウザーの追加読込は異なる�
 ## 関連文書
 
 - [記事一覧仕様](../features/article-list.feature)
+- [タグ一覧仕様](../features/tag-list.feature)
+- [記事ページ仕様](../features/article-page.feature)
 - [Content client 仕様](https://github.com/daiksudcom/content/blob/main/docs/features/content-package.feature)

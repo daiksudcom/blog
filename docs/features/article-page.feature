@@ -7,9 +7,9 @@ Feature: 記事ページを読む
   Rule: 記事は slug を blog origin 直下に配置する
 
     Scenario: 公開済み記事を表示する
-      Given Content API に slug "cloudflare-isr" の記事がある
+      Given slug "cloudflare-isr" の公開済み記事がある
       When 読者が "https://blog.daiksud.com/cloudflare-isr/" を開く
-      Then format "trusted-html" の本文が SSR される
+      Then 記事本文が SSR された初期 HTML に含まれ、client-side JavaScript なしで読める
       And cover と代替テキスト、公開日、更新日、tags を表示する
       And 見出し目次と日本語の読了時間を表示する
       And 前の記事と次の記事へのリンクを利用できる
@@ -22,6 +22,6 @@ Feature: 記事ページを読む
       And 構造化メタデータの datePublished に公開日を設定する
 
     Scenario: 未知の slug を開く
-      Given "missing-article" は Content manifest に存在しない
+      Given slug "missing-article" の公開済み記事は存在しない
       When 読者が "https://blog.daiksud.com/missing-article/" を開く
       Then HTTP ステータス 404 のページを受け取る

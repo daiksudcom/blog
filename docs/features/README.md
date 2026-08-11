@@ -7,12 +7,14 @@ tags: [blog, gherkin, specification, index]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:12:38Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # 振る舞い仕様
 
 各ファイルでは Gherkin キーワードを英語、シナリオ本文を日本語で記述します。
+
+振る舞い仕様は、読者、client、crawler、運用者から観測して検証できる現在の契約の正本です。具体的な値、URL、入出力、エラー、境界条件をここに置き、実装方式の選択理由は [ADR](../adr/README.md) に委ねます。
 
 - [記事一覧](article-list.feature)
 - [タグ一覧](tag-list.feature)

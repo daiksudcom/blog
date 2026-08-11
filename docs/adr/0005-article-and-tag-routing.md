@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, article-routing, tag-routing]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # ADR 0005: 記事とタグのルーティング
@@ -26,7 +26,7 @@ generated:
 
 ## 決定
 
-記事を `https://blog.daiksud.com/{article-name}/`、タグ一覧を `https://blog.daiksud.com/{tag}/` に配置する。両者は同一 namespace を共有する。Content manifest を routing source of truth とし、lowercase ASCII kebab の名前、予約 route、記事とタグの衝突を公開前に検証する。同じ article-name では最古の記事が基本 slug を保持し、後の記事へ `-YYYYMMDD` を付ける。
+記事とタグ一覧を Blog の公開 origin 直下に配置し、同一 namespace を共有する。Content manifest を routing source of truth とし、Blog は manifest entry の種別に従って記事またはタグ一覧を解決する。公開名、予約 route、衝突時の割り当ては Content の route 契約に従い、具体的な公開 URL は[記事ページ仕様](../features/article-page.feature)と[タグ一覧仕様](../features/tag-list.feature)を正本とする。
 
 ## 検討した選択肢
 

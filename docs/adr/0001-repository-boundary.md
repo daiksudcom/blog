@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, repository-boundary]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-10T07:07:01Z
+  at: 2026-08-11T21:36:04Z
 ---
 
 # ADR 0001: Blog のリポジトリ境界
@@ -36,10 +36,12 @@ Blog は記事配信に特化した公開サイトであり、Home、Content、U
 
 ## 結果
 
-Blog だけを変更、検証、デプロイできる。依存パッケージは厳密なバージョンで選択し、他リポジトリの更新と同期を強制しない。
+Blog だけを変更、検証、デプロイでき、他リポジトリのリリース判断から独立できる。
 
 ## 関連文書
 
 - [振る舞い仕様](../features/README.md)
+- [ADR 0008](0008-toolchain-and-version-pinning.md)
 - [Home](https://github.com/daiksudcom/home)
 - [Content](https://github.com/daiksudcom/content)
+- [UI](https://github.com/daiksudcom/ui)

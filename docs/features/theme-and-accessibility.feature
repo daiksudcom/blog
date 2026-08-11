@@ -7,7 +7,7 @@ Feature: 読者の環境に合う操作可能な Blog を表示する
   Scenario Outline: theme を選択する
     Given 読者が Blog を開いている
     When 読者が theme "<theme>" を選択する
-    Then document の data-theme は "<theme>" になる
+    Then Blog の theme 設定は "<theme>" になる
     And 選択は次の訪問にも保持される
 
     Examples:
@@ -20,7 +20,7 @@ Feature: 読者の環境に合う操作可能な Blog を表示する
     Given 「さらに読み込む」ボタンが表示されている
     When 読者が Tab と Enter でボタンを実行する
     Then focus を失わず次の記事を取得する
-    And 読込中、成功、失敗、終端の状態を aria-live で通知する
+    And 読込中、追加件数、失敗、終端の状態を aria-live で通知する
 
   Scenario: focus の位置を識別する
     When 読者がキーボードでリンク、theme 選択、読込ボタンを移動する
