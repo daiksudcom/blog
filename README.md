@@ -45,8 +45,24 @@ pnpm preview
 | ESLint | 型情報を使う TypeScript と Astro の意味的検査 | `pnpm lint:eslint` |
 | Stylelint | CSS と Astro の `<style>` ブロックの検査 | `pnpm lint:stylelint` |
 | knip | 未使用の依存関係、exports、files の検出 | `pnpm lint:knip` |
+| lint-staged / Husky | staged ファイルに対する整形と lint の Git hook | `pnpm lint:staged` |
+| commitlint | コミット件名と pull request タイトルの検査 | `pnpm lint:commit` |
 
 `.vscode/` には推奨拡張と formatter / lint の設定があります。ほかのエディターでも `.editorconfig` と上記コマンドを使って同じ規約を適用してください。
+
+## コミット時の検査
+
+`pnpm install` は Husky の Git hook を設定します。コミット前には lint-staged が staged ファイルだけを対象として、担当ツールによる整形と lint を順番に実行します。整形されたファイルは自動的に再度 stage され、lint が失敗した場合はコミットを中止します。リポジトリ全体の型検査、未使用検査、ビルドを含む最終確認には引き続き `pnpm validate` を使います。
+
+コミット件名と pull request タイトルには Conventional Commits の `type(scope): subject` 形式を使います。scope は省略できます。
+
+```text
+feat(feed): add Atom feed endpoint
+fix: preserve tag filters during navigation
+docs: explain local validation
+```
+
+`commit-msg` hook はコミット件名を commitlint で検証します。CI は hook を迂回した変更も検出できるよう、pull request のタイトルと含まれる全コミット、および `main` に push されたコミットを同じ規約で検証します。通常の fast-forward push では追加コミットだけを検証し、直前の revision が all-zero、取得不能、または新しい `HEAD` の祖先でない場合は、fail-closed として新しい `HEAD` から到達可能な全履歴を検証します。GitHub 形式の two-parent pull request merge commit 本体だけは検証対象から除きます。
 
 ## 関連リポジトリ
 
