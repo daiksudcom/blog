@@ -7,7 +7,7 @@ tags: [blog, adr, architecture, index]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-12T13:46:13Z
 ---
 
 # Architecture Decision Records
@@ -25,4 +25,4 @@ ADR は技術判断の背景と理由、代替案、トレードオフ、結果�
 | 0007 | [フィードと SEO](0007-feed-and-seo.md) | 承認済み | 2026-08-10 |
 | 0008 | [ツールチェーンとバージョン固定](0008-toolchain-and-version-pinning.md) | 承認済み | 2026-08-10 |
 
-変更が必要になった決定は、新しい ADR で置き換え関係を明示します。
+まだ実装されておらず適用実績のない決定は、識別子と参照の継続性を保ったまま既存 ADR を改訂できます。実装後に変更が必要になった決定は、新しい ADR で置き換え関係を明示します。
