@@ -34,6 +34,13 @@ Feature: Blog ページを edge cache から安全に再生成する
     When 読者がページを要求する
     Then 利用可能な stale 応答を返す
 
+  Scenario: Feature Flag variant 間で cache を分離する
+    Given default-off の機能に由来する Blog 応答が edge cache にある
+    When その機能を Product Release する
+    And 読者が同じ Blog ページを要求する
+    Then off variant の応答を返さない
+    And on variant の機能を含む Blog 応答を返す
+
   Scenario: Content リリース後に再生成する
     Given Content release が "content-blog-current" を purge した
     When 読者が Blog ページを要求する

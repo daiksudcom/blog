@@ -26,7 +26,7 @@ Blog を単独でビルド、検証、Cloudflare Workers へデプロイし、�
 
 ## 決定
 
-Node.js 24.16.0 以上、pnpm 11、Astro 7.2.0 を標準とし、開発・検証コマンドは pnpm から各ツールを直接実行する。pnpm 自体は `11.21.0` を宣言する。すべての依存は version range を使わずマニフェストと lockfile に正確に固定し、CI は frozen lockfile で取得する。将来導入する Wrangler は `4.107.0` 以上から採用した一つの patch version とし、`@astrojs/cloudflare`、ほかの build dependency、`@daiksudme/content`、`@daiksudme/ui` も採用した exact version に固定する。実行コードは Web 標準 API を基準とする。
+Node.js 24.16.0 以上、pnpm 11、Astro 7.2.0 を標準とし、開発・検証コマンドは pnpm から各ツールを直接実行する。pnpm 自体は `11.21.0`、Wranglerは`4.107.0`を宣言する。すべての依存は version range を使わずマニフェストと lockfile に正確に固定し、CI は frozen lockfile で取得する。将来導入する`@astrojs/cloudflare`、ほかのbuild dependency、`@daiksudme/ui`も採用したexact versionに固定する。Contentとの契約はpackageではなく、ADR 0003で定めたOpenAPI SemVerへ固定する。実行コードは Web 標準 API を基準とする。
 
 整形と静的検査の責務は、Biome を JavaScript、TypeScript、JSON、CSS、Prettier を Astro と YAML、rumdl を Markdown と MDX、ESLint を型情報が必要な TypeScript と Astro、Stylelint を CSS と Astro、knip を未使用の依存、export、file に割り当てる。Astro の型・コンテンツ検査は `astro check` が担う。
 
