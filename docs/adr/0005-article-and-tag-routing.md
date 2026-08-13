@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0005: 記事とタグのルーティング"
 description: "記事slugとtagをBlog origin直下の共有namespaceへ配置し、Content manifestで衝突を検証することを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0005-article-and-tag-routing.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0005-article-and-tag-routing.md"
 tags: [blog, adr, architecture, article-routing, tag-routing]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0005: 記事とタグのルーティング
@@ -42,4 +42,4 @@ generated:
 
 - [記事ページ仕様](../features/article-page.feature)
 - [タグ一覧仕様](../features/tag-list.feature)
-- [Content slug 仕様](https://github.com/daiksudcom/content/blob/main/docs/features/slug-and-tag.feature)
+- [Content slug 仕様](https://github.com/daiksudme/content/blob/main/docs/features/slug-and-tag.feature)

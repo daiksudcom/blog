@@ -2,12 +2,12 @@
 type: "Architecture Decision Record Index"
 title: "Architecture Decision Records"
 description: "Blogの責務、SSR、Content API、ISR、routing、無限スクロール、SEO、toolchain、Git品質ゲートに関する設計判断への索引である。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/README.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/README.md"
 tags: [blog, adr, architecture, index]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-12T22:52:44Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # Architecture Decision Records

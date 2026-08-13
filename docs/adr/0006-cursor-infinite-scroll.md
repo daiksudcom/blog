@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0006: cursor 無限スクロール"
 description: "cursor paginationとprogressive enhancementを採用し、自動triggerと明示buttonを一つの読込制御へ統合することを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0006-cursor-infinite-scroll.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0006-cursor-infinite-scroll.md"
 tags: [blog, adr, architecture, cursor, infinite-scroll]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0006: cursor 無限スクロール

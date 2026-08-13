@@ -11,9 +11,9 @@ Feature: 記事一覧を継続的に読み込む
 
     Scenario: 最初の12件を表示する
       Given 公開済み記事が20件ある
-      When 読者が "https://blog.daiksud.com/" を開く
+      When 読者が "https://blog.daiksud.me/" を開く
       Then 最初の12件が SSR された HTML に含まれる
-      And 各記事は "https://blog.daiksud.com/{slug}/" にリンクする
+      And 各記事は "https://blog.daiksud.me/{slug}/" にリンクする
       And 続きの記事がある場合は追加読込を利用できる
 
     Scenario: 一覧の末尾から次の12件を自動で読み込む

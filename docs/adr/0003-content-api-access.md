@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0003: Content API へのアクセス"
 description: "共通Content clientと交換可能なtransportを採用し、SSRとbrowser追加取得で同じschemaを使うことを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0003-content-api-access.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0003-content-api-access.md"
 tags: [blog, adr, architecture, content-api-access]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0003: Content API へのアクセス
@@ -26,7 +26,7 @@ SSR、preview、ローカル開発、ブラウザーの追加読込は異なる�
 
 ## 決定
 
-`@daiksudcom/content` の `createContentClient({ transport })` を使用する。本番 SSR は Cloudflare Service Binding transport、preview とローカルは HTTPS transport、ブラウザーの無限スクロールは `https://content.daiksud.com/v1/blog` への HTTPS transport を使う。クライアントは Zod で応答を検証する。
+`@daiksudme/content` の `createContentClient({ transport })` を使用する。本番 SSR は Cloudflare Service Binding transport、preview とローカルは HTTPS transport、ブラウザーの無限スクロールは `https://content.daiksud.me/v1/blog` への HTTPS transport を使う。クライアントは Zod で応答を検証する。
 
 ## 検討した選択肢
 
@@ -43,4 +43,4 @@ SSR、preview、ローカル開発、ブラウザーの追加読込は異なる�
 - [記事一覧仕様](../features/article-list.feature)
 - [タグ一覧仕様](../features/tag-list.feature)
 - [記事ページ仕様](../features/article-page.feature)
-- [Content client 仕様](https://github.com/daiksudcom/content/blob/main/docs/features/content-package.feature)
+- [Content client 仕様](https://github.com/daiksudme/content/blob/main/docs/features/content-package.feature)

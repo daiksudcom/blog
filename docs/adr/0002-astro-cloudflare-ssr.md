@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0002: Astro と Cloudflare による SSR"
 description: "Astro 7とCloudflare adapterを採用し、Contentから取得した記事をCloudflare WorkersでSSRすることを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0002-astro-cloudflare-ssr.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0002-astro-cloudflare-ssr.md"
 tags: [blog, adr, architecture, astro, cloudflare, ssr]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0002: Astro と Cloudflare による SSR
@@ -43,4 +43,4 @@ Astro の Request/Response と Cloudflare binding を同じサーバー境界で
 - [記事ページ仕様](../features/article-page.feature)
 - [ADR 0003](0003-content-api-access.md)
 - [ADR 0004](0004-cloudflare-native-isr.md)
-- [Content の記事 API 仕様](https://github.com/daiksudcom/content/blob/main/docs/features/blog-article-api.feature)
+- [Content の記事 API 仕様](https://github.com/daiksudme/content/blob/main/docs/features/blog-article-api.feature)

@@ -2,17 +2,17 @@
 type: "Documentation Index"
 title: "文書"
 description: "Blogの受け入れ基準となる振る舞い仕様と技術判断への入口を提供する。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/README.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/README.md"
 tags: [blog, documentation, index]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # 文書
 
-このディレクトリは `blog.daiksud.com` の受け入れ基準と技術判断を管理します。
+このディレクトリは `blog.daiksud.me` の受け入れ基準と技術判断を管理します。
 
 ## 文書の責務
 
@@ -21,4 +21,4 @@ generated:
 
 観測可能な契約について両者の記述が異なる場合は、振る舞い仕様を現在の仕様として扱います。
 
-Blog は [Content](https://github.com/daiksudcom/content) が提供する記事契約と [UI](https://github.com/daiksudcom/ui) の選択済みバージョンを利用し、独立してビルド、検証、デプロイします。
+Blog は [Content](https://github.com/daiksudme/content) が提供する記事契約と [UI](https://github.com/daiksudme/ui) の選択済みバージョンを利用し、独立してビルド、検証、デプロイします。

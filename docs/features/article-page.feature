@@ -8,7 +8,7 @@ Feature: 記事ページを読む
 
     Scenario: 公開済み記事を表示する
       Given slug "cloudflare-isr" の公開済み記事がある
-      When 読者が "https://blog.daiksud.com/cloudflare-isr/" を開く
+      When 読者が "https://blog.daiksud.me/cloudflare-isr/" を開く
       Then 記事本文が SSR された初期 HTML に含まれ、client-side JavaScript なしで読める
       And cover と代替テキスト、公開日、更新日、tags を表示する
       And 見出し目次と日本語の読了時間を表示する
@@ -23,5 +23,5 @@ Feature: 記事ページを読む
 
     Scenario: 未知の slug を開く
       Given slug "missing-article" の公開済み記事は存在しない
-      When 読者が "https://blog.daiksud.com/missing-article/" を開く
+      When 読者が "https://blog.daiksud.me/missing-article/" を開く
       Then HTTP ステータス 404 のページを受け取る
