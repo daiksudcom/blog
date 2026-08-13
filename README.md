@@ -1,6 +1,6 @@
 # Blog
 
-`blog.daiksud.com` の記事一覧、タグ一覧、記事ページ、フィード、発見可能性、キャッシュの振る舞いを定義するリポジトリです。
+`blog.daiksud.me` の記事一覧、タグ一覧、記事ページ、フィード、発見可能性、キャッシュの振る舞いを定義するリポジトリです。
 
 ## 現在の状態
 
@@ -66,6 +66,6 @@ docs: explain local validation
 
 ## 関連リポジトリ
 
-- [Home](https://github.com/daiksudcom/home)
-- [Content](https://github.com/daiksudcom/content)
-- [UI](https://github.com/daiksudcom/ui)
+- [Home](https://github.com/daiksudme/home)
+- [Content](https://github.com/daiksudme/content)
+- [UI](https://github.com/daiksudme/ui)

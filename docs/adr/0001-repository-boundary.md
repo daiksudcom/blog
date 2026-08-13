@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0001: Blog のリポジトリ境界"
 description: "Blogが所有する表示、routing、SSR、cache、feedの責務を他のrepositoryから分離することを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0001-repository-boundary.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0001-repository-boundary.md"
 tags: [blog, adr, architecture, repository-boundary]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0001: Blog のリポジトリ境界
@@ -26,7 +26,7 @@ Blog は記事配信に特化した公開サイトであり、Home、Content、U
 
 ## 決定
 
-`blog` リポジトリは `blog.daiksud.com` の表示、ルーティング、SSR、キャッシュ、RSS、sitemap、theme、アクセシビリティを所有する。記事ソースと Content API は [Content](https://github.com/daiksudcom/content)、共有表示契約は [UI](https://github.com/daiksudcom/ui) が所有する。
+`blog` リポジトリは `blog.daiksud.me` の表示、ルーティング、SSR、キャッシュ、RSS、sitemap、theme、アクセシビリティを所有する。記事ソースと Content API は [Content](https://github.com/daiksudme/content)、共有表示契約は [UI](https://github.com/daiksudme/ui) が所有する。
 
 ## 検討した選択肢
 
@@ -42,6 +42,6 @@ Blog だけを変更、検証、デプロイでき、他リポジトリのリリ
 
 - [振る舞い仕様](../features/README.md)
 - [ADR 0008](0008-toolchain-and-version-pinning.md)
-- [Home](https://github.com/daiksudcom/home)
-- [Content](https://github.com/daiksudcom/content)
-- [UI](https://github.com/daiksudcom/ui)
+- [Home](https://github.com/daiksudme/home)
+- [Content](https://github.com/daiksudme/content)
+- [UI](https://github.com/daiksudme/ui)

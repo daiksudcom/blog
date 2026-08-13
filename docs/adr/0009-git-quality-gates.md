@@ -2,12 +2,12 @@
 type: "Architecture Decision Record"
 title: "ADR 0009: Git品質ゲート"
 description: "Blogのstaged file、commit message、pull request titleをGit hookとCIで検証する方針を定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0009-git-quality-gates.md"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0009-git-quality-gates.md"
 tags: [blog, adr, architecture, git-hooks, conventional-commits]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-12T23:28:55Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0009: Git品質ゲート

@@ -8,10 +8,10 @@ Feature: タグで絞った記事一覧を閲覧する
 
     Scenario: 既知のタグを開く
       Given "astro" タグに公開済み記事が18件ある
-      When 読者が "https://blog.daiksud.com/astro/" を開く
+      When 読者が "https://blog.daiksud.me/astro/" を開く
       Then "astro" タグの最初の12件が SSR された HTML に含まれる
       And ページの見出しは "astro" の記事一覧を示す
-      And canonical URL は "https://blog.daiksud.com/astro/" である
+      And canonical URL は "https://blog.daiksud.me/astro/" である
 
     Scenario: タグ一覧の続きを読み込む
       Given "astro" の一覧に12件が表示され、その続きに同じタグの公開済み記事がある
@@ -21,5 +21,5 @@ Feature: タグで絞った記事一覧を閲覧する
 
     Scenario: 未知のタグを開く
       Given "unknown-topic" タグを持つ公開済み記事は存在しない
-      When 読者が "https://blog.daiksud.com/unknown-topic/" を開く
+      When 読者が "https://blog.daiksud.me/unknown-topic/" を開く
       Then HTTP ステータス 404 のページを受け取る

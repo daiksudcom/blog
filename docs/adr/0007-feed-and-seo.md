@@ -1,13 +1,13 @@
 ---
 type: "Architecture Decision Record"
 title: "ADR 0007: フィードと SEO"
-description: "blog.daiksud.comを公開URL authorityとし、RSS、sitemap、robots、canonicalを同originへ揃えることを定める。"
-resource: "https://github.com/daiksudcom/blog/blob/main/docs/adr/0007-feed-and-seo.md"
+description: "blog.daiksud.meを公開URL authorityとし、RSS、sitemap、robots、canonicalを同originへ揃えることを定める。"
+resource: "https://github.com/daiksudme/blog/blob/main/docs/adr/0007-feed-and-seo.md"
 tags: [blog, adr, architecture, feed, seo]
 status: stable
 generated:
   by: "codex/gpt-5.6-sol"
-  at: 2026-08-11T21:36:04Z
+  at: 2026-08-13T00:35:00Z
 ---
 
 # ADR 0007: フィードと SEO
@@ -26,7 +26,7 @@ Blog の公開 origin を crawler、feed reader、共有サービスへ一貫し
 
 ## 決定
 
-`blog.daiksud.com` を Blog の公開 URL authority とする。購読、検索、共有に使う artifact と metadata は、この authority から導出した恒久 URL で生成する。production の利用計測には Cloudflare Web Analytics を採用する。現在の endpoint と公開 metadata の期待結果は[フィードと発見可能性仕様](../features/feed-and-discovery.feature)を正本とする。
+`blog.daiksud.me` を Blog の公開 URL authority とする。購読、検索、共有に使う artifact と metadata は、この authority から導出した恒久 URL で生成する。production の利用計測には Cloudflare Web Analytics を採用する。現在の endpoint と公開 metadata の期待結果は[フィードと発見可能性仕様](../features/feed-and-discovery.feature)を正本とする。
 
 ## 検討した選択肢
 
