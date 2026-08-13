@@ -26,7 +26,7 @@ Blog は edge cache の速度を保ちながら、Content release 後に記事�
 
 ## 決定
 
-production Wrangler 設定で cache を有効にし、Cloudflare native Workers Caching を ISR 相当の配信層にする。browser と edge の freshness policy を分離し、stale-while-revalidate と stale-if-error を利用する。cache key は Worker のデプロイバージョンで分離し、Content に依存する応答は resource-scoped cache tag によって release 時に無効化する。現在の cache policy、tag、再生成結果は [Blog ISR 仕様](../features/blog-isr.feature)を正本とする。
+production Wrangler 設定で cache を有効にし、Cloudflare native Workers Caching を ISR 相当の配信層にする。browser と edge の freshness policy を分離し、stale-while-revalidate と stale-if-error を利用する。cache key は Worker のデプロイバージョンと、応答へ影響する評価済みflag variationで分離する。Content に依存する応答は resource-scoped cache tag によって Content release 時に無効化する。flagに依存する応答はflag variationがcache keyに含まれるため、flags repository側の状態変更でcacheを共有しない。現在の cache policy、tag、再生成結果は [Blog ISR 仕様](../features/blog-isr.feature)を正本とする。
 
 ## 検討した選択肢
 
@@ -36,7 +36,7 @@ production Wrangler 設定で cache を有効にし、Cloudflare native Workers 
 
 ## 結果
 
-通常時は edge から低遅延で配信し、再検証中または Content の一時障害時にも利用可能な応答を維持できる。代わりに、Cloudflare の cache semantics、Content release との tag 協調、cache 状態の運用観測が必要になる。
+通常時は edge から低遅延で配信し、再検証中または Content の一時障害時にも利用可能な応答を維持できる。flag公開前の応答が公開後に混入せず、flagをOFFへ戻した後も公開中のcacheを再利用しない。代わりに、Cloudflare の cache semantics、Content release と Deploy の tag 協調、cache状態の運用観測が必要になる。
 
 ## 関連文書
 

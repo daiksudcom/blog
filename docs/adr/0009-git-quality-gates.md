@@ -28,6 +28,8 @@ generated:
 
 コミット件名とpull requestタイトルはConventional Commits形式とし、`@commitlint/config-conventional`を継承したcommitlintで検証する。Huskyの`commit-msg` hookは作成中のコミットメッセージを検証する。CIはpull requestのタイトルとbaseからheadまでの全コミットを検証する。`main`への通常のfast-forward pushでは直前のrevisionから新しい`HEAD`までの追加コミットを検証する。直前のrevisionがall-zero、取得不能、または新しい`HEAD`の祖先でない場合は、履歴置換を含む検証範囲を安全に限定できないpushとして扱い、fail-closedで新しい`HEAD`から到達可能な全履歴を検証する。GitHub形式の件名とtwo-parent topologyを持つpull request merge commit本体だけは、検証済みタイトルを含むmerge metadataとして除外する。Dependabotも依存の種類に応じたConventional Commits形式のprefixを使う。
 
+pull requestのhead branchは`<type>/<slug>`、`breaking-change/<type>/<slug>`、`deprecated/<type>/<slug>`のいずれかとする。ただしSemVerへの影響はbranch名でもmutableなlabelでもなく、pull requestのタイトルから決める。squash mergeによってタイトルがcommit件名として履歴へ残る一方、branch名はmerge後に失われるためである。branch名とpathはlabel付けの補助にのみ使う。Dependabot branchだけは命名規則を免除する。
+
 Huskyの`pre-commit` hookではlint-stagedを実行する。lint-stagedはstaged fileだけを対象とし、ADR 0008で定めた担当に従ってformatterを先に適用し、その後にlinterを実行する。formatterの変更はlint-stagedが再度stageする。型検査、未使用検査、buildを含むリポジトリ全体の検証はCIと`pnpm validate`が担当する。
 
 ## 検討した選択肢
@@ -40,9 +42,10 @@ Huskyの`pre-commit` hookではlint-stagedを実行する。lint-stagedはstaged
 
 ## 結果
 
-通常のコミットでは対象ファイルの整形とlint、およびコミット件名の誤りを共有前に検出できる。Git hookを迂回した場合もpull requestと`main`のCIがコミット規約を検証する。force-pushや初回pushでは全履歴の検証コストが発生するが、履歴の置換によって未検証コミットが共有されることはない。pull requestタイトルの編集時にもCIが再実行され、squash commitの候補となる件名を早い段階で確認できる。
+通常のコミットでは対象ファイルの整形とlint、およびコミット件名の誤りを共有前に検出できる。Git hookを迂回した場合もpull requestと`main`のCIがコミット規約を検証する。force-pushや初回pushでは全履歴の検証コストが発生するが、履歴の置換によって未検証コミットが共有されることはない。pull requestタイトルの編集時にもCIが再実行され、squash commitの候補となる件名を早い段階で確認できる。branch、descriptor、package versionを一つのpolicy checkで照合するため、labelの手動変更だけでRelease影響を変えることはできない。
 
 ## 関連文書
 
 - [ADR 0008](0008-toolchain-and-version-pinning.md)
+- [ADR 0010](0010-deploy-and-release.md)
 - [README](../../README.md)
