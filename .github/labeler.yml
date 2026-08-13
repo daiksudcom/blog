@@ -1,5 +1,6 @@
-# Version-affecting labels are derived only from the head branch. Paths never
-# introduce a SemVer impact label, so release validation remains unambiguous.
+# Version-affecting labels are derived only from the pull request head branch, so a path
+# match can never manufacture a SemVer impact the author did not choose. Product Release is
+# decided in the flags repository, so no branch name gates a release here.
 'BREAKING CHANGE':
   - head-branch: ['^breaking-change/(?:feat|perf|fix)/']
 
@@ -16,13 +17,10 @@ fix:
   - head-branch: ['^(?:(?:breaking-change|deprecated)/)?fix/']
 
 revert:
-  - head-branch: ['^(?:revert|rollback/v[0-9]+\.[0-9]+\.[0-9]+)/']
+  - head-branch: ['^revert/']
 
-release:
-  - head-branch: ['^(?:release|rollback)/v[0-9]+\.[0-9]+\.[0-9]+/']
-
-# These labels do not affect the version. A path matcher means "only files in
-# this set"; a code PR with an incidental docs or test change is not relabeled.
+# These labels never affect the version. A path rule uses one combined all-files glob, so a
+# code change with an incidental docs or test edit is not reclassified.
 docs:
   - any:
       - head-branch: ['^docs/']
@@ -39,20 +37,22 @@ test:
   - any:
       - head-branch: ['^test/']
       - changed-files:
-          - any-glob-to-all-files: ['{test,tests}/**']
+          - any-glob-to-all-files: ['{test/**,tests/**,**/*.test.*,**/*.spec.*}']
 
 build:
   - any:
       - head-branch: ['^build/']
       - changed-files:
           - any-glob-to-all-files:
-              ['{package.json,pnpm-lock.yaml,pnpm-workspace.yaml,astro.config.*,wrangler.*}']
+              [
+                '{package.json,pnpm-lock.yaml,pnpm-workspace.yaml,astro.config.*,tsconfig.json,wrangler.*}',
+              ]
 
 ci:
   - any:
       - head-branch: ['^ci/']
       - changed-files:
-          - any-glob-to-all-files: ['{.github/workflows/**,.github/scripts/**}']
+          - any-glob-to-all-files: ['.github/{workflows/**,scripts/**,*.yml}']
 
 chore:
-  - head-branch: ['^(?:chore|release/v[0-9]+\.[0-9]+\.[0-9]+)/']
+  - head-branch: ['^chore/']

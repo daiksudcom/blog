@@ -33,11 +33,8 @@ spec:
       description: Bug fix (PATCH)
       color: 0052cc
     - name: revert
-      description: Revert or production rollback (PATCH)
+      description: Reverts previously released behavior (PATCH)
       color: 79b8ff
-    - name: release
-      description: Metadata-only release or rollback operation
-      color: 5319e7
     - name: docs
       description: Documentation-only change
       color: c4b5e0
